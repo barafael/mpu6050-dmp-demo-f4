@@ -62,20 +62,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ebyte-test-f4"
-version = "0.1.0"
-dependencies = [
- "cortex-m",
- "cortex-m-rt",
- "embedded-hal 0.2.7",
- "mpu6050-dmp",
- "nb 1.0.0",
- "panic-rtt-target",
- "rtt-target",
- "stm32f4xx-hal",
-]
-
-[[package]]
 name = "embedded-dma"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -161,9 +147,24 @@ checksum = "33a33a362ce288760ec6a508b94caaec573ae7d3bbbd91b87aa0bad4456839db"
 [[package]]
 name = "mpu6050-dmp"
 version = "0.2.0"
+source = "git+https://github.com/barafael/mpu6050-dmp#c7f54b1d14570410016b0a00b1ce465475d80201"
 dependencies = [
  "embedded-hal 0.2.7",
  "libm",
+]
+
+[[package]]
+name = "mpu6050-dmp-demo"
+version = "0.1.0"
+dependencies = [
+ "cortex-m",
+ "cortex-m-rt",
+ "embedded-hal 0.2.7",
+ "mpu6050-dmp",
+ "nb 1.0.0",
+ "panic-rtt-target",
+ "rtt-target",
+ "stm32f4xx-hal",
 ]
 
 [[package]]

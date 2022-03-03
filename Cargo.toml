@@ -1,5 +1,5 @@
 [package]
-name = "ebyte-test-f4"
+name = "mpu6050-dmp-demo"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,7 +10,7 @@ embedded-hal = "0.2.7"
 nb = "1.0.0"
 panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
 rtt-target = { version = "0.3.1", features = ["cortex-m"] }
-mpu6050-dmp = { path = "../mpu6050-dmp" }
+mpu6050-dmp = { git = "https://github.com/barafael/mpu6050-dmp" }
 
 [dependencies.stm32f4xx-hal]
 features = ["rt", "stm32f411"]
