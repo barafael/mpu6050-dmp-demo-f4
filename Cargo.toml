@@ -1,5 +1,5 @@
 [package]
-name = "mpu6050-dmp-demo"
+name = "mpu6050-dmp-demo-f4"
 version = "0.1.0"
 edition = "2021"
 
