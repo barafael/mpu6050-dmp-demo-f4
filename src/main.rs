@@ -29,7 +29,7 @@ fn main() -> ! {
         let rcc = dp.RCC.constrain();
         let clocks = rcc.cfgr.sysclk(48.MHz()).freeze();
 
-        let mut delay_tim5 = dp.TIM5.delay_ms(&clocks);
+        let _delay_tim5 = dp.TIM5.delay_ms(&clocks);
 
         let gpiob = dp.GPIOB.split();
         let scl = gpiob
@@ -62,9 +62,8 @@ fn main() -> ! {
                 let quat = Quaternion::from_bytes(&buf[..16]).unwrap();
                 let ypr = YawPitchRoll::from(quat);
                 rprintln!("{:.5?}; {:.5?}; {:.5?};", ypr.yaw, ypr.pitch, ypr.roll);
+                led.toggle();
             }
-
-            led.toggle();
         }
     }
 
